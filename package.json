@@ -1,0 +1,29 @@
+{
+	"name": "gmail-client",
+	"version": "1.0.0",
+	"description": "a desktop client for gmail",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron .",
+		"test": "test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Motistudio/gmail-client.git"
+	},
+	"keywords": [
+		"gmail",
+		"client",
+		"mail",
+		"desktop"
+	],
+	"author": "Moti Shriki",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Motistudio/gmail-client/issues"
+	},
+	"homepage": "https://github.com/Motistudio/gmail-client#readme",
+	"devDependencies": {
+		"electron-prebuilt": "^1.1.0"
+	}
+}
