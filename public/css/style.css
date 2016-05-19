@@ -1,0 +1,73 @@
+body{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+body main{
+  flex-grow: 1;
+}
+header{
+  min-height: 70px;
+  border-bottom: 1px solid #dedede;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+  header .logo{
+    padding: 0 20px;
+  }
+    header .logo .symbol{
+      width: 30px;
+      max-height: 50px;
+      -webkit-app-region: no-drag;
+    }
+      header .logo .symbol img{
+        width: 100%;
+        height: 100%;
+      }
+  header .center{
+    flex-grow: 1;
+  }
+    header .center .wrapper{
+      -webkit-app-region: no-drag;
+    }
+  header .window-gestures{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    -webkit-app-region: no-drag;
+  }
+    header .window-gestures li{
+      display: block;
+      width: 10px;
+      height: 10px;
+      margin: 5px;
+      border-radius: 100%;
+      background: #e2e2e2;
+      transition: background-color .2s ease-in;
+      cursor: pointer;
+    }
+    header .window-gestures li.minimize{
+      background-color: #2ecc71;
+    }
+    header .window-gestures li.minimize:hover{
+      background-color: #48E68B;
+    }
+    header .window-gestures li.enlarge{
+      background-color: #f1c40f;
+    }
+    header .window-gestures li.enlarge:hover{
+      background-color: #FFDE29;
+    }
+    header .window-gestures li.close{
+      background-color: #e74c3c;
+    }
+    header .window-gestures li.close:hover{
+      background-color: #FF6656;
+    }

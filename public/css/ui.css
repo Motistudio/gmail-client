@@ -1,0 +1,45 @@
+/* text inputs: */
+input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
+textarea,
+select{
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background: #e6e6e6;
+  line-height: 25px;
+  transition: all .1s ease-in;
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):focus,
+textarea:focus,
+select:focus{
+  background: #dedede;
+}
+input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]),
+select{
+  padding: 0 10px;
+}
+textarea{
+  padding: 15px;
+}
+/* buttons: */
+button,
+.button,
+input[type="button"],
+input[type="submit"]{
+  padding: 0 10px;
+  border: 1px solid #2980b9;
+  border-radius: 3px;
+  background: #fff;
+  color: #2c3e50;
+  line-height: 23px; /* because of border */
+  cursor: pointer;
+  transition: all .1s ease-in;
+}
+button:hover,
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover{
+  border: 1px solid #3498db;
+  border-radius: 3px;
+  color: #34495e;
+}
