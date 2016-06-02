@@ -1,11 +1,11 @@
-body{
+body, #app{
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   background: #fff;
 }
-body main{
+body main, #app main{
   flex-grow: 1;
 }
 header{
@@ -14,6 +14,7 @@ header{
 }
 header{
   display: flex;
+  justify-content: space-between;
   align-items: center;
   -webkit-app-region: drag;
   -webkit-user-select: none;
@@ -32,9 +33,15 @@ header{
       }
   header .center{
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
   }
-    header .center .wrapper{
+    header .center > *{
+      display: block;
       -webkit-app-region: no-drag;
+    }
+    header .center input{
+      flex-grow: 1;
     }
   header .window-gestures{
     display: flex;
