@@ -9,5 +9,5 @@ app.on('ready', App.open);
 app.on('activate', function(){
   !App.window && App.open();
 });
-app.on('window-all-closed', App.quit);
+app.on('window-all-closed', app.quit);
 module.exports = app;
