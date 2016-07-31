@@ -1,0 +1,23 @@
+{
+  "name": "gmail-client",
+  "description": "a desktop client for gmail",
+  "main": "index.js",
+  "authors": [
+    "Moti Shriki"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "gmail",
+    "client",
+    "mail",
+    "desktop"
+  ],
+  "homepage": "https://github.com/Motistudio/gmail-client",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

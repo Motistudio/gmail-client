@@ -1,5 +1,6 @@
 var React = require('react');
 var store = require('../../../stores/store');
+var SearchBar = require('../components/searchBar');
 module.exports = React.createClass({
   render: function(){
     return (
@@ -10,14 +11,13 @@ module.exports = React.createClass({
           </div>
         </div>
         <div className="center">
-          <input type="text" placeholder="Search..." />
-          <button>
-            Search
-          </button>
+          <SearchBar placeholder="Search..."></SearchBar>
         </div>
         <ul className="window-gestures">
           <li className="minimize" onClick={
             () => {
+              // window.minimize();
+              require('App').minimize();
               store.dispatch({
                 type: 'MINIMIZE_APP',
                 value: true

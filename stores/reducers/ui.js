@@ -1,6 +1,7 @@
 const initialState = {
   open: true,
-  alive: true
+  alive: true,
+  minimized: false
 };
 module.exports = function(state, action){
   state = state || initialState;
@@ -10,6 +11,8 @@ module.exports = function(state, action){
       return Object.assign({}, state, {open: false, alive: false});
     case 'CLOSE_WINDOW':
       return Object.assign({}, state, {open: false});
+    case 'MINIMIZE_APP':
+      return Object.assign({}, state, {minimized: true});
     default:
       return state;
   }

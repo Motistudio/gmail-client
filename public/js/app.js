@@ -1,7 +1,9 @@
 const React = require('react');
 const ReactDom = require('react-dom');
 
-const App = require('../../App.js');
+const App = require('App');
+App.test();
+App.minimize();
 
 // const store = require('../../stores/store');
 //

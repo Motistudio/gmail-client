@@ -43,6 +43,9 @@ header{
     header .center input{
       flex-grow: 1;
     }
+    header .center .input-wrapper{
+      flex-grow: 1;
+    }
   header .window-gestures{
     display: flex;
     align-items: center;
