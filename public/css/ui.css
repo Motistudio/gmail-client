@@ -28,13 +28,13 @@ textarea{
   .input-wrapper .input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]){
     display: block;
     width: 100%;
-    padding-left: 25px;
+    padding-left: 35px;
   }
   .input-wrapper .icon{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 2.5px;
+    left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,4 +61,11 @@ input[type="submit"]:hover{
   border: 1px solid #3498db;
   border-radius: 3px;
   color: #34495e;
+}
+
+/* sections */
+section.center{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }

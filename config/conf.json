@@ -1,8 +1,15 @@
 {
   "window": {
-    "width": 800,
-    "height": 600,
-    "frame": false
+    "main": {
+      "width": 800,
+      "height": 600,
+      "frame": false
+    },
+    "login": {
+      "width": 400,
+      "height": 400,
+      "frame": false
+    }
   },
   "tools": {
     "devTools": false

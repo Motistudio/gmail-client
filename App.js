@@ -7,18 +7,36 @@ const BrowserWindow = electron.BrowserWindow
 const Mediator = require('./modules/mediator')
 const Configuration = require('./modules/configuration')
 
-let mainWindow = null
+/**
+ * Opens the main window
+ */
+const openMainWindow = (options = {}) => {
+  const windowConf = Configuration.getWindow('main')
+  App.window = new BrowserWindow(Object.assign({width: windowConf['width'], height: windowConf['height'], frame: windowConf['frame']}, options))
+  App.window.loadURL('file://' + __dirname + '/public/index.html')
+  Configuration.get('tools')['devTools'] && App.window.webContents.openDevTools()
+  App.window.on('close', function(){
+    App.window = null
+  })
+}
+
+/**
+ * Opens login window
+ */
+const openLoginWindow = (options = {}) => {
+  const windowConf = Configuration.getWindow('login')
+  App.login = new BrowserWindow(Object.assign({width: windowConf['width'], height: windowConf['height'], frame: windowConf['frame']}, options))
+  App.login.loadURL('file://' + __dirname + '/public/login.html')
+  Configuration.get('tools')['devTools'] && App.login.webContents.openDevTools()
+  App.login.on('close', function(){
+    App.login = null
+  })
+}
 
 // App static class:
 const App = class {
   static open (options = {}) {
-    const windowConf = Configuration.get('window')
-    App.window = mainWindow = new BrowserWindow(Object.assign({width: windowConf['width'], height: windowConf['height'], frame: windowConf['frame']}, options))
-    App.window.loadURL('file://' + __dirname + '/public/index.html')
-    Configuration.get('tools')['devTools'] && App.window.webContents.openDevTools()
-    App.window.on('close', function(){
-      App.window = null
-    })
+    openMainWindow(options)
   }
   static test () {
     alert(!!window)

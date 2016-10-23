@@ -80,3 +80,19 @@ header{
     header .window-gestures li.close:hover{
       background-color: #FF6656;
     }
+/* login */
+.login .login-form{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-form{
+  padding: 20px;
+}
+  .login-form > div{
+    text-align: center;
+  }
+  .login-form > * + *{
+    margin-top: 15px;
+  }

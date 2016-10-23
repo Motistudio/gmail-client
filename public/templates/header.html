@@ -1,11 +1,11 @@
 <header>
-  <div class="logo">
+  <div class="logo" v-if="include.logo">
     <div class="symbol">
       <img src="./images/new-google-favicon.svg" />
     </div>
   </div>
   <div class="center">
-    <SearchBar placeholder="Search..."></SearchBar>
+    <search-bar placeholder="Search..."></search-bar>
   </div>
   <ul class="window-gestures">
     <li class="minimize" v-on:click="minimize"></li>
