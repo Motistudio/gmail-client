@@ -21,6 +21,25 @@ select{
 textarea{
   padding: 15px;
 }
+/* inputs wrappers: */
+.input-wrapper{
+  position: relative;
+}
+  .input-wrapper .input:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]){
+    display: block;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .input-wrapper .icon{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
 /* buttons: */
 button,
 .button,
